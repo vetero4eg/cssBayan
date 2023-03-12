@@ -48,7 +48,7 @@ body {
   display: none;
 }
 
-.mems__title {
+.mems__header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -74,9 +74,11 @@ body {
 }
 
 .mems__wrapper {
-  width: 80%;
+  display: block;
+  width: clamp(20rem, 90%, 40rem);
   height: 0;
   margin: 0 auto;
+  transition: all .5s ease-in-out;
 }
 
 .mems__image {
@@ -95,11 +97,11 @@ body {
   transform: scale(1);
 }
 
-input:checked + .mems__title {
+input:checked + .mems__content .mems__header {
   color: #333333;
 }
 
-input:checked + .mems__title .mems__icon {
+input:checked + .mems__content .mems__icon {
   transform: rotate(45deg);
 }
 
@@ -108,7 +110,7 @@ input:checked + .mems__title .mems__icon {
     visibility: visible;
   } 
 
-  .mems:hover .mems__title {
+  .mems:hover .mems__content .mems__header {
     color: #333333;
   }
 
