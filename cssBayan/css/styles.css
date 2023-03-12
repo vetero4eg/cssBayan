@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 1rem;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -32,6 +36,8 @@ body {
   margin: 0;
   padding: 0;
   list-style-type: none;
+  cursor: pointer;
+  pointer-events: all;
 }
 
 .mems__item {
@@ -40,8 +46,6 @@ body {
   padding-top: 1rem;
   padding-bottom: 0.5rem;
   border-top: 1px solid #ccc;
-  cursor: pointer;
-  pointer-events: all;
 }
 
 .mems__control {
@@ -58,6 +62,7 @@ body {
   font-size: 1.6rem;
   padding-bottom: 0.5rem;
   color: #0800fd;
+  cursor: pointer;
   transition: color .3s ease-in-out;
 }
 
@@ -78,6 +83,7 @@ body {
   width: clamp(20rem, 90%, 40rem);
   height: 0;
   margin: 0 auto;
+  cursor: pointer;
   transition: all .5s ease-in-out;
 }
 
@@ -108,22 +114,39 @@ input:checked + .mems__content .mems__icon {
 @media(hover: hover) and (pointer: fine) {
   .mems:hover .mems__icon {
     visibility: visible;
+    transition: all .3s ease;
   } 
 
   .mems:hover .mems__content .mems__header {
     color: #333333;
+    transition: all .3s ease;
   }
 
   .mems__item:not(:has(:checked)):hover .mems__icon {
     transform: rotate(45deg);
+    transition: all .3s ease;
   }
 
   .mems__item:not(:has(:checked)):hover .mems__image {
     width: 100%;
     transform: scale(1);
+    transition: all .3s ease;
   }
 
   .mems__item:not(:has(:checked)):hover .mems__wrapper {
     height: auto;
+    transition: all .3s ease;
+  }
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  html {
+    font-size: 1.4rem;
   }
 }
