@@ -81,7 +81,7 @@ body {
 
 .mems__wrapper {
   display: block;
-  width: clamp(20rem, 90%, 40rem);
+  width: 100%;
   height: 0;
   margin: 0 auto;
   cursor: pointer;
@@ -144,10 +144,18 @@ input:checked + .mems__content .mems__icon {
   html {
     font-size: 1.2rem;
   }
+
+  .mems__wrapper {
+    width: 80%;
+  }
 }
 
 @media (min-width: 1440px) {
   html {
     font-size: 1.4rem;
+  }
+
+  .mems__wrapper {
+    width: 50%;
   }
 }
