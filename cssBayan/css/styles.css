@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #fdf9f1;
+  font-family: 'Nunito', Arial, Helvetica, sans-serif;
+  line-height: 1.2;
+  padding-top: 2rem;
+  color: #333333;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.container {
+  width: 90vw;
+  margin: 0 auto;
+}
+
+.header__title {
+  margin: .5rem 0;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.mems {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.mems__item {
+  padding-bottom: 1rem;
+  border-top: 1px solid #ccc;
+}
+
+.mem {
+  cursor: pointer;
+  pointer-events: all;
+}
+
+.mem__title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.6rem;
+  color: #0800fd;
+  transition: color .3s ease-in-out;
+}
+
+.mem__icon {
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  background-image: url(../images/icons/plus.svg);
+  transition: transform .3s ease-in-out;
+}
+
+.mem__control {
+  display: none;
+}
+
+input[checked] + .mem__title {
+  color: #333333;
+}
+
+input[checked] + .mem__title .mem__icon {
+  transform: rotate(45deg);
+}

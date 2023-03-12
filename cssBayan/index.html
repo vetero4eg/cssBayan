@@ -6,14 +6,90 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CSS BAYAN</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
   <header class="container header">
     <h1 class="header__title">CSS Bayan</h1>
   </header>
-  <main class="container">
-
+  <main class="main container">
+    <ul class="mems">
+      <li class="mems__item">
+        <label class="mem">
+          <input type="radio" class="mem__control" name="mem" value="1" checked>
+          <h2 class="mem__title">
+            Every programmer
+            <button class="mem__icon" type="button" aria-label="toggle mem"></button>
+          </h2>
+          <img src="images/music.jpeg" alt="every programmer is a bit of a musician" class="mem__image">
+        </label>
+      </li>
+      <li class="mems__item">
+        <label class="mem">
+          <input type="radio" class="mem__control" name="mem" value="2">
+          <h2 class="mem__title">
+            Bad code
+            <button class="mem__icon" type="button" aria-label="toggle mem"></button>
+          </h2>
+          <img src="images/code.jpg" alt="bad code is your bad code" class="mem__image">
+        </label>
+      </li>
+      <li class="mems__item">
+        <label class="mem">
+          <input type="radio" class="mem__control" name="mem" value="3">
+          <h2 class="mem__title">
+            Deadline
+            <button class="mem__icon" type="button" aria-label="toggle mem"></button>
+          </h2>
+          <img src="images/deadline.jpg" alt="deadline is tomorrow" class="mem__image">
+        </label>
+      </li>
+      <li class="mems__item">
+        <label class="mem">
+          <input type="radio" class="mem__control" name="mem" value="4">
+          <h2 class="mem__title">
+            Debug
+            <button class="mem__icon" type="button" aria-label="toggle mem"></button>
+          </h2>
+          <img src="images/debug.jpg" alt="debug is problem" class="mem__image">
+        </label>
+      </li>
+      <li class="mems__item">
+        <label class="mem">
+          <input type="radio" class="mem__control" name="mem" value="5">
+          <h2 class="mem__title">
+            Meeting
+            <button class="mem__icon" type="button" aria-label="toggle mem"></button>
+          </h2>
+          <img src="images/debug.jpg" alt="productive meeting" class="mem__image">
+        </label>
+      </li>
+      <li class="mems__item">
+        <label class="mem">
+          <input type="radio" class="mem__control" name="mem" value="6">
+          <h2 class="mem__title">
+            Snail
+            <button class="mem__icon" type="button" aria-label="toggle mem"></button>
+          </h2>
+          <img src="images/snail.jpg" alt="employee of the month" class="mem__image">
+        </label>
+      </li>
+      <li class="mems__item">
+        <label class="mem">
+          <input type="radio" class="mem__control" name="mem" value="7">
+          <h2 class="mem__title">
+            Project
+            <button class="mem__icon" type="button" aria-label="toggle mem"></button>
+          </h2>
+          <img src="images/project.jpg" alt="wonderful project" class="mem__image">
+        </label>
+      </li>
+    </ul>
   </main>
   <footer class="container footer">
     <p class="footer__sign">@vetero4eg, 2023</p>
