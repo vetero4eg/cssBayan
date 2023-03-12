@@ -13,14 +13,6 @@ body {
   color: #333333;
 }
 
-img {
-  display: block;
-  width: 100%;
-  height: auto;
-  margin: 0 auto;
-  object-fit: contain;
-}
-
 .main {
   flex-grow: 1;
 }
@@ -43,44 +35,93 @@ img {
 }
 
 .mems__item {
-  padding-bottom: 1rem;
+  display: block;
+  width: 100%;
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
   border-top: 1px solid #ccc;
-}
-
-.mem {
   cursor: pointer;
   pointer-events: all;
 }
 
-.mem__title {
+.mems__control {
+  display: none;
+}
+
+.mems__title {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+  margin: 0;
   font-size: 1.6rem;
+  padding-bottom: 0.5rem;
   color: #0800fd;
   transition: color .3s ease-in-out;
 }
 
-.mem__icon {
+.mems__icon {
   display: block;
+  visibility: hidden;
   width: 2rem;
   height: 2rem;
   padding: 0;
   background-color: transparent;
   border: none;
   background-image: url(../images/icons/plus.svg);
-  transition: transform .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
-.mem__control {
-  display: none;
+.mems__wrapper {
+  width: 80%;
+  height: 0;
+  margin: 0 auto;
 }
 
-input[checked] + .mem__title {
+.mems__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  transform: scale(0);
+  transform-origin: center;
+}
+
+.mems__item:has(:checked) .mems__wrapper {
+  height: auto;
+}
+.mems__item:has(:checked) .mems__image {
+  transform: scale(1);
+}
+
+input:checked + .mems__title {
   color: #333333;
 }
 
-input[checked] + .mem__title .mem__icon {
+input:checked + .mems__title .mems__icon {
   transform: rotate(45deg);
+}
+
+@media(hover: hover) and (pointer: fine) {
+  .mems:hover .mems__icon {
+    visibility: visible;
+  } 
+
+  .mems:hover .mems__title {
+    color: #333333;
+  }
+
+  .mems__item:not(:has(:checked)):hover .mems__icon {
+    transform: rotate(45deg);
+  }
+
+  .mems__item:not(:has(:checked)):hover .mems__image {
+    width: 100%;
+    transform: scale(1);
+  }
+
+  .mems__item:not(:has(:checked)):hover .mems__wrapper {
+    height: auto;
+  }
 }
